@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Notable people | David's infosec website</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<header id="header">
+		<img src="small-selfie.jpg" class="stamp" />
+		<h1>David on Infosec</h1>
+		<nav><a href="index.html">Home</a> | <a href="#">Notable people</a> | <a href="wargames.html">Wargames</a> | <a href="ctf.html">CTFs</a></nav>
+	</header>
+	<div class="container">
+		<h2>Notable people and organisations</h2>
+		<p>There are many people (and groups of people) who have contributed in the field of computer and information security.</p>
+		<table>
+			<thead>
+				<th>Name</th>
+				<th>Picture</th>
+				<th>Website</th>
+				<th>Description</th>
+			</thead>
+			<tbody>
+				<tr id="cyphar">
+					<th>Aleksa Serai</th>
+					<td><a class="preview" href="https://avatars3.githubusercontent.com/u/2888411?s=400"><img src="https://avatars3.githubusercontent.com/u/2888411?s=128" /><!-- source: https://github.com/cyphar --></a></td>
+					<td><a href="https://www.cyphar.com">cyphar.com</a></td>
+					<td>Has contributed patches to the Linux kernel and Docker (a wrapper around Linux container features) improving security. Also found security flaws in notable services such as Optus' voicemail (with <a href="#shubs">Shubham Shah</a>) and Medium.</td>
+				</tr>
+				<tr id="shubs">
+					<th>Shubham Shah</th>
+					<td><a class="preview" href="https://shubh.am/content/images/2015/Mar/10383953_604559339688984_7413639995759494252_n.jpg"><img src="https://shubh.am/content/images/2015/Mar/10383953_604559339688984_7413639995759494252_n.jpg" width="128" /></a></td>
+					<td><a href="https://shubh.am">shubh.am</a></td>
+					<td>Found and reported security flaws in voicemail services, including Optus (alongside <a href="#cyphar">Aleksa Serai</a>) and Vodafone.</td>
+				</tr>
+				<tr>
+					<th>Ben Grubb</th>
+					<td><a class="preview" href="https://pbs.twimg.com/profile_images/538967475937742848/3WVOTVXh_400x400.jpeg"><img src="https://pbs.twimg.com/profile_images/538967475937742848/3WVOTVXh_400x400.jpeg" width="128" /></a></td>
+					<td><a href="http://bengrubb.com">bengrubb.com</a></td>
+					<td>Deputy technology editor for the Sydney Morning Herald. Reported on <a href="#shubs">Shubham</a> and <a href="#cyphar">Aleksa</a>'s voicemail security flaws.</td>
+				</tr>
+				<tr>
+					<th>Gibson Security</th>
+					<td></td>
+					<td><a href="https://gibsonsec.org">gibsonsec.org</a></td>
+					<td>Discovered security flaws in the popular Snapchat app.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="http://cssglobe.com/lab/tooltip/02/main.js"></script> <!-- image preview tooltips -->
+</body>

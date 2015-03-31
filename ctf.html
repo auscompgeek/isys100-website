@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>David's infosec website</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<header id="header">
+		<img src="small-selfie.jpg" class="stamp" />
+		<h1>David on Infosec</h1>
+		<nav><a href="index.html">Home</a> | <a href="people.html">Notable people</a> | <a href="wargames.html">Wargames</a> | <a href="#">CTFs</a></nav>
+	</header>
+	<div class="container">
+		<h2>Capture the Flag competitions</h2>
+		<p>A capture the flag competition is a computer security competition. Teams usually race to get points. They usually serve an educational purpose. There are two common types of CTFs.</p>
+		<p><b>Jeopardy-style CTFs</b> involve multiple categories of problems, each usually having different point values.</p>
+		<p>In <b>attack-defence CTFs</b>, each team has a machine or network which they must secure against attacks. Each team then attempts to attack each other to get points.</p>
+		<p><a href="https://ctftime.org">ctftime.org</a> is a useful resource.</p>
+
+		<p>Below is a countdown to the next CTF.</p>
+		<div id="countdown-container" style="display:none">
+			<span id="event"></span>
+			in
+			<span id="countdown"></span>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdn.rawgit.com/hilios/jQuery.countdown/2.0.4/dist/jquery.countdown.min.js" defer></script>
+	<script>
+	function setCountdown(date, title) {
+		$("#countdown").countdown(date)
+		.on("update.countdown", updateCountdown)
+		.on("finish.countdown", finishCountdown);
+
+		$("#event").text(title);
+
+		$("#countdown-container").show();
+	}
+
+	function updateCountdown(event) {
+		var format;
+
+		if (event.offset.totalDays) {
+			format = "%-Dd %Hh %Mm %Ss";
+		} else if (event.offset.hours) {
+			format = "%-Hh %Mm %Ss";
+		} else if (event.offset.minutes) {
+			format = "%-Mm %Ss";
+		} else {
+			format = "%Ss";
+		}
+
+		$(this).text(event.strftime(format));
+	}
+
+	function finishCountdown() {
+		$(this).text("... now?");
+	}
+
+	$(function () {
+		setCountdown(new Date("2015-04-01T14:30:00Z"), "BackdoorCTF 2015");
+	});
+	</script>
+</body>

@@ -1,0 +1,79 @@
+html, body {
+	margin: 0;
+	padding; 0;
+}
+html {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	background-color: black;
+	color: lime;
+}
+h1, h2, h3, h4, h5, h6, thead {
+	font-family: "Liberation Mono", Menlo, Consolas, monospace;
+}
+
+#header {
+	margin: auto;
+	margin-bottom: 1em;
+	padding-top: 1em;
+	padding-bottom: 2em;
+	text-align: center;
+	width: 90%;
+	background-image: url(https://pbs.twimg.com/profile_banners/278611594/1402472372/1500x500); /* thanks @sysr_q */
+	background-color: #223;
+	color: lightgrey;
+	border-radius: 0 0 1em 1em;
+}
+#header h1 {
+	color: lime;
+}
+#header nav {
+	background-color: #001;
+	color: lightgrey;
+	display: inline-block;
+}
+#header nav a[href="#"] {
+	color: lightblue;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	margin-bottom: 2em;
+}
+h1 {
+	text-align: center;
+}
+#toc {
+	background-color: lightgrey;
+	border: 1px black;
+}
+a {
+	color: cornflowerblue;
+	text-decoration: none;
+}
+a:visited {
+	color: lilac;
+}
+a:hover, a:active {
+	color: orange;
+	text-decoration: underline;
+}
+td {
+	padding: .5em;
+}
+.stamp {
+	float: right;
+	margin-right: .5em;
+}
+
+#event {
+	font-weight: bold;
+}
+
+#preview {
+	position: absolute;
+	border: 1px solid #111;
+	padding: 5px;
+	display: none;
+	background-color: #333;
+}
